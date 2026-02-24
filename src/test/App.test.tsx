@@ -3,8 +3,8 @@ import Sidebar from "../components/Sidebar"; import InboxPage from "../pages/Inb
 function wrap(ui: React.ReactElement) { return render(<MemoryRouter>{ui}</MemoryRouter>); }
 
 describe("Pages", () => {
-  it("Sidebar renders", () => { wrap(<Sidebar/>); expect(screen.getByText("Webhook Relay")).toBeInTheDocument(); });
-  it("InboxPage renders", () => { wrap(<InboxPage/>); expect(screen.getByText("/hooks/stripe")).toBeInTheDocument(); });
-  it("ForwardingPage renders", () => { wrap(<ForwardingPage/>); expect(screen.getByText("http://localhost:3000/api/webhooks/stripe")).toBeInTheDocument(); });
-  it("ReplaysPage renders", () => { wrap(<ReplaysPage/>); expect(screen.getByText("req_1")).toBeInTheDocument(); });
+  it("Sidebar renders", () => { wrap(<Sidebar />); expect(screen.getByText("Webhook Relay")).toBeInTheDocument(); });
+  it("InboxPage renders", () => { wrap(<InboxPage />); expect(screen.getAllByText("/hooks/stripe")[0]).toBeInTheDocument(); });
+  it("ForwardingPage renders", () => { wrap(<ForwardingPage />); expect(screen.getByText("http://localhost:3000/api/webhooks/stripe")).toBeInTheDocument(); });
+  it("ReplaysPage renders", () => { wrap(<ReplaysPage />); expect(screen.getByText("req_1")).toBeInTheDocument(); });
 });
