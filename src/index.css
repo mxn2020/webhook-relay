@@ -1,0 +1,50 @@
+/* Webhook Relay — Terminal Green & Pitch Black */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&family=Fira+Code:wght@400;500;600&display=swap');
+:root, [data-theme="light"] {
+  --color-bg-primary: #F0FDF4; --color-bg-secondary: #DCFCE7; --color-bg-tertiary: #BBF7D0;
+  --color-bg-card: #FFFFFF; --color-bg-hover: rgba(16,185,129,0.08);
+  --color-text-primary: #064E3B; --color-text-secondary: #047857; --color-text-tertiary: #059669;
+  --color-text-inverse: #FFFFFF;
+  --color-accent-primary: #10B981; --color-accent-secondary: #059669; --color-accent-tertiary: #047857;
+  --color-accent-soft: rgba(16,185,129,0.15);
+  --color-border: rgba(6,78,59,0.15); --color-border-strong: rgba(6,78,59,0.3);
+  --color-success: #10B981; --color-warning: #F59E0B; --color-error: #EF4444;
+  --card-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+}
+[data-theme="dark"] {
+  --color-bg-primary: #000000; --color-bg-secondary: #052E16; --color-bg-tertiary: #064E3B;
+  --color-bg-card: #052E16; --color-bg-hover: rgba(52,211,153,0.1);
+  --color-text-primary: #34D399; --color-text-secondary: #6EE7B7; --color-text-tertiary: #10B981;
+  --color-text-inverse: #000000;
+  --color-accent-primary: #10B981; --color-accent-secondary: #34D399; --color-accent-tertiary: #6EE7B7;
+  --color-accent-soft: rgba(16,185,129,0.2);
+  --color-border: rgba(52,211,153,0.2); --color-border-strong: rgba(52,211,153,0.4);
+  --card-shadow: 0 10px 15px -3px rgba(0,0,0,0.5), 0 4px 6px -2px rgba(0,0,0,0.3);
+}
+:root {
+  --font-family: 'Chivo', sans-serif; --font-mono: 'Fira Code', monospace;
+  --font-size-xs: 0.75rem; --font-size-sm: 0.875rem; --font-size-base: 1rem; --font-size-lg: 1.125rem; --font-size-xl: 1.25rem; --font-size-2xl: 1.5rem;
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --radius-sm: 4px; --radius-md: 8px; --radius-lg: 12px; --transition-fast: 0.15s ease; --sidebar-width: 260px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-family); background: var(--color-bg-primary); color: var(--color-text-primary); min-height: 100vh; line-height: 1.6; }
+a { color: inherit; text-decoration: none; } button { font-family: inherit; cursor: pointer; }
+.card { background: var(--color-bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-md); box-shadow: var(--card-shadow); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); padding: var(--space-2) var(--space-4); border-radius: var(--radius-sm); font-weight: 700; font-size: var(--font-size-sm); border: 1px solid var(--color-border); background: var(--color-bg-card); color: var(--color-text-primary); transition: all var(--transition-fast); text-transform: uppercase; letter-spacing: 0.5px; }
+.btn:hover { border-color: var(--color-border-strong); background: var(--color-bg-hover); }
+.btn-primary { background: var(--color-accent-primary); color: var(--color-text-inverse); border-color: var(--color-accent-primary); }
+.btn-primary:hover { background: var(--color-accent-secondary); border-color: var(--color-accent-secondary); }
+.btn-ghost { background: transparent; border: none; }
+.btn-sm { padding: var(--space-1) var(--space-3); font-size: 11px; }
+.badge { display: inline-flex; align-items: center; padding: 2px 8px; border-radius: 2px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.badge-green { background: rgba(16,185,129,0.15); color: var(--color-accent-primary); border: 1px solid rgba(16,185,129,0.3); }
+.badge-red { background: rgba(239,68,68,0.15); color: var(--color-error); border: 1px solid rgba(239,68,68,0.3); }
+.input, .textarea { width: 100%; padding: var(--space-2) var(--space-3); background: var(--color-bg-primary); border: 1px solid var(--color-border); border-radius: var(--radius-sm); color: var(--color-text-primary); font-family: var(--font-mono); font-size: var(--font-size-sm); }
+.input:focus, .textarea:focus { outline: none; border-color: var(--color-accent-primary); box-shadow: inset 0 0 0 1px var(--color-accent-primary); }
+.mono { font-family: var(--font-mono); }
+/* Specific styling for syntax highlighting in this app */
+.json-block { background: var(--color-bg-primary); border: 1px solid var(--color-border); padding: var(--space-4); border-radius: var(--radius-sm); overflow-x: auto; color: var(--color-text-secondary); font-size: 13px; line-height: 1.5; }
+.json-key { color: var(--color-accent-primary); font-weight: 600; }
+.json-string { color: var(--color-warning); }
+.json-number { color: #A78BFA; }
