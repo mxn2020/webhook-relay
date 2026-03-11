@@ -1,5 +1,6 @@
-id: 6111c94f-647a-4d0d-aa63-dd2f142a195a
 name: webhook-relay
+project_scope: main
+project_type: standalone
 description: React + TypeScript + Vite
 tier: prototype
 lane: oss
@@ -9,5 +10,6 @@ stack: [typescript, react, convex, vite]
 repo: "https://github.com/mxn2020/webhook-relay"
 deploy_url: null
 last_active: 2026-02-24
-tags: []
-notes: 
+tags: [webhooks, relay, integration, events, api, tools, automation]
+notes: null
+id: 6111c94f-647a-4d0d-aa63-dd2f142a195a
